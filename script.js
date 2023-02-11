@@ -7,21 +7,43 @@ let arr = [
 ];
 
 function PrintStudentswithMap() {
-  //Write your code here , just console.log
+  arr.map(({id, name, age, marks})=>{
+    if(marks>50)
+    {
+        console.log(`${id} ${name} ${age} ${marks}`)
+    }
+  });
 }
 
 function PrintStudentsbyForEach() {
-  //Write your code here , just console.log
+  arr.forEach(elements => {
+    if(elements.marks>50)
+    console.log(elements)
+  });
 }
 
 function addData() {
-  //Write your code here, just console.log
+  arr.push({id:4,name:"susan",age:"20",marks:45});
+  console.log(arr);
 }
 
 function removeFailedStudent() {
-  //Write your code here, just console.log
+  arr.forEach(elements => {
+    if(elements.marks<50)
+    arr.pop(elements);
+  });
+
+  console.log(arr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  let brr = [
+    { id: 4, name: "tute", age: "19", marks: 60 },
+    { id: 5, name: "mate", age: "20", marks: 75 },
+    { id: 6, name: "ramen", age: "21", marks: 45 },
+  ];
+
+  let crr = arr.concat(brr);
+
+  console.log(crr);
 }
