@@ -10,7 +10,7 @@ function PrintStudentswithMap() {
   arr.map(({id, name, age, marks})=>{
     if(marks>50)
     {
-        console.log(`${id} ${name} ${age} ${marks}`)
+        console.log(`Id:${id}, Name:${name}, Age:${age}, Marks:${marks}`);
     }
   });
 }
